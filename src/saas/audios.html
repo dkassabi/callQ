@@ -1,0 +1,109 @@
+@@include('./partials/html.html')
+
+    <head>
+        @@include("./partials/title-meta.html", {"title": "Audios"})
+
+        <!-- Datatable css -->
+        <link href="assets/vendor/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/vendor/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+
+        @@include('./partials/head-css.html')
+    </head>
+
+    <body>
+        <!-- Begin page -->
+        <div class="wrapper">
+
+            @@include('./partials/menu.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+
+                        @@include("./partials/page-title.html", {"subtitle":"Accueil","title":"Audios"})
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col-sm-5">
+                                                <a href="import-audio.html" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle me-2"></i> Importer un audio </a>
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <div class="text-sm-end">
+                                                    <button type="button" class="btn btn-light mb-2 me-1"><i class="mdi mdi-cog-outline"></i></button>
+                                                    <!-- <button type="button" class="btn btn-light mb-2 me-1">Import</button> -->
+                                                    <button type="button" class="btn btn-success mb-2"><i class="ri-file-excel-2-line"></i> Export</button>
+                                                </div>
+                                            </div><!-- end col-->
+                                        </div>
+                
+                                        <div class="table-responsive">
+                                            <table class="table table-centered w-100 dt-responsive nowrap" id="audios-datatable">
+                                                <thead class="table-light">
+                                                    <tr>
+                                                        <th class="all" style="width: 20px;">
+                                                            <div class="form-check">
+                                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                                                <label class="form-check-label" for="customCheck1">&nbsp;</label>
+                                                            </div>
+                                                        </th>
+                                                        <th class="all">Nom de l'audio</th>
+                                                        <th>Date d'import</th>
+                                                        <th>Statut</th>
+                                                        <th style="width: 85px;">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div> <!-- end card-body-->
+                                </div> <!-- end card-->
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->        
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        @@include('./partials/footer-scripts.html')
+
+        <!-- Datatable js -->
+        <script src="assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/vendor/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="assets/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="assets/vendor/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="assets/vendor/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js"></script>
+
+        <!-- Audio format datatable js -->
+        <!-- <script src="assets/js/pages/audios.js"></script> -->
+        <script src="assets/js/apis/audios-list.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+    </body>
+</html>
